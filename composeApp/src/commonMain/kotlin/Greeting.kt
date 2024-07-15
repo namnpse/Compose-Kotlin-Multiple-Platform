@@ -1,7 +1,9 @@
 class Greeting {
-    private val platform = getPlatform()
+    companion object {
 
-    fun greet(): String {
-        return "Hello, ${platform.name}!"
+        private val platform = getPlatform()
+        fun greet(): String {
+            return "Hello, ${platform.name}!"
+        }
     }
 }
