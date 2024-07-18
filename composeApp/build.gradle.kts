@@ -50,6 +50,8 @@ kotlin {
             implementation(libs.oshi.core)
         }
     }
+
+    tasks.create("testClasses")
 }
 
 android {
