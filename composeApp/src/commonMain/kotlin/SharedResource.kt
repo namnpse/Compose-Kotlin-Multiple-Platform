@@ -8,7 +8,9 @@ import androidx.compose.ui.Modifier
 import cmp_kmp.composeapp.generated.resources.Res
 import cmp_kmp.composeapp.generated.resources.compose_multiplatform
 import cmp_kmp.composeapp.generated.resources.headphone
+import cmp_kmp.composeapp.generated.resources.shared_resources
 import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun SharedResource() {
@@ -19,7 +21,7 @@ fun SharedResource() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Shared Resource"
+            text = stringResource(Res.string.shared_resources)
         )
         Image(painter = painterResource(Res.drawable.headphone), contentDescription = "compose_multiplatform")
     }
