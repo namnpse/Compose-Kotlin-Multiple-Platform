@@ -27,6 +27,7 @@ fun App(
                 text = "The current battery level is ${batteryManager.getBatteryLevel()}"
             )
             SharedResource()
+            UserProfileKoin()
         }
     }
 }
