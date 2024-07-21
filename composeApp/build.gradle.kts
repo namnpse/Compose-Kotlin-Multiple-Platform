@@ -53,6 +53,9 @@ kotlin {
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.lifecycle.viewmodel)
             implementation(libs.navigation.compose)
+
+            api(libs.datastore.preferences) // use api to let other sourceSet (android, ios,...) to access it
+            api(libs.datastore)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
