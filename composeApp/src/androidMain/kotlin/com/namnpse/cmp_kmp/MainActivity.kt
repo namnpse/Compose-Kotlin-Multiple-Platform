@@ -1,7 +1,7 @@
 package com.namnpse.cmp_kmp
 
 import App
-import BatteryManager
+import expect_actual.BatteryManager
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

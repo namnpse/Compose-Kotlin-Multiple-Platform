@@ -1,3 +1,5 @@
+package expect_actual
+
 import platform.UIKit.UIDevice
 
 class IOSPlatform: Platform {

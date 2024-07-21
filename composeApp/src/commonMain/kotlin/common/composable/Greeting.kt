@@ -1,3 +1,7 @@
+package common.composable
+
+import expect_actual.getPlatform
+
 class Greeting {
     companion object {
 
