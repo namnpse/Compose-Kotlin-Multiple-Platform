@@ -3,6 +3,9 @@ import androidx.compose.ui.window.ComposeUIViewController
 import data_store.createDataStore
 import di.initDI
 import expect_actual.BatteryManager
+import io.ktor.client.engine.darwin.Darwin
+import network.CensoredWordKtorClient
+import network.initKtorClient
 
 fun MainViewController() = ComposeUIViewController(
     configure = {
@@ -13,6 +16,10 @@ fun MainViewController() = ComposeUIViewController(
         batteryManager = remember { BatteryManager() },
         prefs = remember {
             createDataStore()
+        },
+        ktorClient = remember {
+            val httpClient = initKtorClient(Darwin.create())
+            CensoredWordKtorClient(httpClient)
         }
     )
 }

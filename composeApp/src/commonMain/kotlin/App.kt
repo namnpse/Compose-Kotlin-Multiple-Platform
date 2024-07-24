@@ -7,10 +7,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import common.composable.CensoredTextComposable
 import common.composable.Greeting
 import common.composable.UserProfileKoin
 import data_store.DataStoreComposable
 import expect_actual.BatteryManager
+import network.CensoredWordKtorClient
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import shared_resources.SharedResource
 
@@ -18,7 +20,8 @@ import shared_resources.SharedResource
 @Preview
 fun App(
     batteryManager: BatteryManager,
-    prefs: DataStore<Preferences>
+    prefs: DataStore<Preferences>,
+    ktorClient: CensoredWordKtorClient,
 ) {
     MaterialTheme {
         val greetingMessage = Greeting.greet()
@@ -36,6 +39,7 @@ fun App(
             SharedResource()
             UserProfileKoin()
             DataStoreComposable(prefs)
+            CensoredTextComposable(ktorClient)
         }
     }
 }

@@ -5,6 +5,9 @@ import data_store.DATA_STORE_FILE_NAME
 import data_store.createDataStore
 import di.initDI
 import expect_actual.BatteryManager
+import io.ktor.client.engine.okhttp.OkHttp
+import network.CensoredWordKtorClient
+import network.initKtorClient
 
 fun main() = application {
 
@@ -20,7 +23,11 @@ fun main() = application {
     ) {
         App(
             batteryManager = remember { BatteryManager() },
-            prefs = remember { prefs }
+            prefs = remember { prefs },
+            ktorClient = remember {
+                val httpClient = initKtorClient(OkHttp.create())
+                CensoredWordKtorClient(httpClient)
+            }
         )
     }
 }
