@@ -74,6 +74,9 @@ kotlin {
             api(libs.datastore)
 
             implementation(libs.bundles.ktor)
+
+            api(libs.moko.permissions)
+            api(libs.moko.permissions.compose)
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)

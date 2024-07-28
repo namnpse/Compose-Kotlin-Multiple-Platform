@@ -14,6 +14,7 @@ import data_store.DataStoreComposable
 import expect_actual.BatteryManager
 import network.CensoredWordKtorClient
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import permission_handling.PermissionHandlingComposable
 import shared_resources.SharedResource
 
 @Composable
@@ -40,6 +41,7 @@ fun App(
             UserProfileKoin()
             DataStoreComposable(prefs)
             CensoredTextComposable(ktorClient)
+            PermissionHandlingComposable()
         }
     }
 }

@@ -24,6 +24,8 @@ datastore = "1.1.1"
 
 ktor = "2.3.12"
 
+moko = "0.18.0"
+
 # Testing
 assertk = "0.28.1" # similar to Truth lib (Java), but for Kotlin project
 coreKtx = "1.6.1"
@@ -69,6 +71,10 @@ assertk = { module = "com.willowtreeapps.assertk:assertk", version.ref = "assert
 compose-ui-test-junit4-android = { module = "androidx.compose.ui:ui-test-junit4-android", version.ref = "composeTest" }
 compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "composeTest" }
 core-ktx = { group = "androidx.test", name = "core-ktx", version.ref = "coreKtx" }
+
+# Moko
+moko-permissions = { module = "dev.icerock.moko:permissions", version.ref = "moko" }
+moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "moko" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
