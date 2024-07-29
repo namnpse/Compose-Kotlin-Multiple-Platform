@@ -55,6 +55,8 @@ kotlin {
             implementation(libs.koin.androidx.compose)
 
             implementation(libs.ktor.client.okhttp)
+
+            implementation(libs.core.splashscreen)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
