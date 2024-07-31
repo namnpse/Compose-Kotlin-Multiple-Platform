@@ -33,6 +33,8 @@ assertk = "0.28.1" # similar to Truth lib (Java), but for Kotlin project
 coreKtx = "1.6.1"
 composeTest = "1.6.8"
 
+datetime = "0.6.0"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -79,6 +81,9 @@ moko-permissions = { module = "dev.icerock.moko:permissions", version.ref = "mok
 moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "moko" }
 # Splash screen
 core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "core-splashscreen" }
+
+# Datetime
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
