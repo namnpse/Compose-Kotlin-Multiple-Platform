@@ -8,14 +8,19 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.remember
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
+import com.arkivanov.decompose.ExperimentalDecomposeApi
+import com.arkivanov.decompose.retainedComponent
 import data_store.createDataStore
 import io.ktor.client.engine.okhttp.OkHttp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import navigation.NavigationApp
+import navigation.components.RootComponent
 import network.CensoredWordKtorClient
 import network.initKtorClient
 
 class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalDecomposeApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -31,6 +36,10 @@ class MainActivity : ComponentActivity() {
             }
         }
 
+        val root = retainedComponent {
+            RootComponent(it)
+        }
+
         setContent {
             App(
                 batteryManager = remember {
@@ -44,6 +53,7 @@ class MainActivity : ComponentActivity() {
                     CensoredWordKtorClient(httpClient)
                 }
             )
+//            NavigationApp(root)
         }
     }
 }

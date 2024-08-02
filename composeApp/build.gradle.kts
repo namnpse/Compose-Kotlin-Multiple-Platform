@@ -57,6 +57,8 @@ kotlin {
             implementation(libs.ktor.client.okhttp)
 
             implementation(libs.core.splashscreen)
+
+            implementation(libs.decompose)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -81,6 +83,10 @@ kotlin {
             api(libs.moko.permissions.compose)
 
             implementation(libs.kotlinx.datetime)
+
+            implementation(libs.decompose)
+            implementation(libs.decompose.jetbrains)
+            implementation(libs.kotlinx.serialization.json)
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)
