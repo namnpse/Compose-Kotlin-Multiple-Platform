@@ -87,6 +87,8 @@ kotlin {
             implementation(libs.decompose)
             implementation(libs.decompose.jetbrains)
             implementation(libs.kotlinx.serialization.json)
+
+            implementation(libs.qr.kit)
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)

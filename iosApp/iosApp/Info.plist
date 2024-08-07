@@ -48,5 +48,8 @@
 	</array>
 	<key>NSMicrophoneUsageDescription</key>
     <string>So that others can hear you in the call, we need your microphone.</string>
+
+    <key>NSCameraUsageDescription</key><string>$(PRODUCT_NAME) camera description.</string>
+    <key>NSPhotoLibraryUsageDescription</key><string>$(PRODUCT_NAME)photos description.</string>
 </dict>
 </plist>
